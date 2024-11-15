@@ -1,0 +1,74 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aliceblue;
+    font-size: clamp(1rem, 0.75rem + 1vw, 1.4rem);
+
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+    margin: .7em 10px 1em;
+}
+
+
+/*--5----------General From Styles------------*/
+div.form-field {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: max(500px, 60%);
+    margin: 15px auto;
+}
+
+input {
+    font-size: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+label {
+    width: min(175px, 8em);
+    /*Prevnet flexbox form shrinking the width of the labels*/
+    flex: none; 
+}
+
+input:hover {
+    box-shadow: 2px 2px 3px 2px rgb(91, 97, 97);
+}
+
+input:focus {
+    box-shadow: none;
+    outline: 2px solid navy;
+}
+
+button {
+    font-size: 85%;
+    display: block;
+    padding: 5px 10px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: lime;
+    background-color: aqua;
+    cursor: pointer;
+}
+
