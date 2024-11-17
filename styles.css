@@ -13,8 +13,13 @@ html {
     margin: 0;
 }
 
+:root {
+    --blue: rgb(170, 194, 214);
+}
+
 body {
-    background-color: aliceblue;
+    background-color: rgb(117, 129, 140);
+    color: beige;
     font-size: clamp(1rem, 0.75rem + 1vw, 1.4rem);
 
 }
@@ -32,21 +37,36 @@ div.form-field {
     align-items: center;
     gap: 15px;
     width: max(500px, 60%);
-    margin: 15px auto;
+    min-height: 2.3em;
+    margin: 20px auto;
+    position: relative; /*To display requried text right above input */
 }
 
 input {
+    background-color: var(--blue);
     font-size: 100%;
+    font-family: inherit;
     width: 100%;
     border-radius: 10px;
     padding: 5px;
     outline: none;
+    letter-spacing: 0.03em;
 }
 
 label {
-    width: min(175px, 8em);
+    width: min(100px, 5em);
     /*Prevnet flexbox form shrinking the width of the labels*/
     flex: none; 
+}
+
+span.required-label {
+    font-size: 16px;
+    background-color: orangered;
+    color: white;
+    position: absolute;
+    top: -10px;
+    right: -25px;
+    padding: 2px;
 }
 
 input:hover {
@@ -67,8 +87,7 @@ button {
 }
 
 button:hover {
-    background-color: lime;
-    background-color: aqua;
+    background-color: var(--blue);
     cursor: pointer;
 }
 
