@@ -10,26 +10,31 @@
 
 <body>
     <h1>Form Validation with Javascript Constraint API</h1>
-    <form>
+    <form novalidate>
         <div class="form-field">
             <label for="user-email">Email: <span class="required-label">Required</span></label>
             <input type="email" id="user-email" name="email" required placeholder="example@gmail.com">
+            <span></span>
         </div>
         <div class="form-field">
             <label for="user-country">Country: </label>
-            <input type="text" id="user-country" name="country" required>
+            <input type="text" id="user-country" name="country">
+            <span></span>
         </div>
         <div class="form-field">
             <label for="user-zip-code">Zip Code: </label>
-            <input type="text" id="user-zip-code" name="zip-code" required>
+            <input type="text" id="user-zip-code" name="zip-code">
+            <span></span>
         </div>
         <div class="form-field">
             <label for="user-password">Password: <span class="required-label">Required</span></label>
             <input type="password" id="user-password" name="password" required minlength="8">
+            <span></span>
         </div>
         <div class="form-field">
             <label for="confirm-password">Confirm Password: <span class="required-label">Required</span></label>
             <input type="password" id="confirm-password" name="confirm-password" required minlength="8">
+            <span></span>
         </div>
         
         <button type="submit">Submit</button>
