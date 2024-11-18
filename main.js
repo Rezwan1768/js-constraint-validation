@@ -50,6 +50,7 @@ form.querySelectorAll("input[required]").forEach(input => {
 confirmPass.addEventListener("input", () => {
     if(confirmPass.value != password.value) {
         confirmPass.setCustomValidity("Password do not match.");
-    } else confirmPass.setCustomValidity("");
+    } else confirmPass.setCustomValidity("");   
+    confirmPass.reportValidity();
 })
 

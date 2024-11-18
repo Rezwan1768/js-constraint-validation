@@ -98,16 +98,22 @@ input:invalid {
     outline: none;
 }
 
-input:invalid+span::before {
-    content: "✖";
-    color: var(--ruby-red);
+input+span {
     width: 1em;
 }
 
+input:invalid+span::before {
+    content: "✖";
+    color: var(--ruby-red);
+}
+
 /* Take up the same amount of space as the cross mark for invalid inputs*/
-input:valid+span:before {
+input:optional+span:before {
     content: "";
     display: inline-block;
-    width: 1em;
+}
 
+input:required:valid+span::after {
+    content: "✔";
+    color: rgb(0, 166, 0);
 }
